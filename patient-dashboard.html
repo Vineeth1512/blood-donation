@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/donor-patient-dashboard.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="images/blood-logo.png" alt="Blood Drop Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#learn-about-donation">Learn About Donation</a></li>
+                <li class="dropdown">
+                    <a href="#">Looking For Blood</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-donor-list.html">Donar List</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Donate Blood</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-register.html">Patient Register</a></li>
+                        <li><a href="donor-register.html">Donor Register</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li class="dropdown">
+                    <a href="#">Register Now ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Patient Register</a></li>
+                        <li><a href="register-donar.html">Donor Register</a></li>
+                        <li><a href="organize-register.html">Organization Register</a></li>
+
+                    </ul>
+                </li> -->
+            </ul>
+        </nav>
+        <div class="profile-dropdown" id="profile-dropdown">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                alt="Profile" id="header-profile" class="profile-pic" onclick="toggleProfileDropdown()" />
+            <ul class="profile-menu" id="profileMenu">
+                <li><a href="patient-edit.html">Edit Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="profile-dropdown" id="mobile-profile-dropdown">
+            <ul style="list-style-type: none;">
+                <li class="dropdown">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                        alt="Profile" id="mobile-header-profile" class="profile-pic"
+                        onclick="toggleProfileDropdown()" />
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-edit.html">Edit Profile</a></li>
+                        <li><a href="index.html" onclick="logout()">Logout</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <!-- <li>
+                <a href="guest-index.html">Guest Login</a>
+            </li> -->
+            <li><a href="guest-index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#learn-about-donation">Learn About Donation</a></li>
+            <li><a href="patient-donor-list.html">Donar List</a></li>
+
+            <!-- <li class="dropdown">
+                <a href="#">Looking For Blood</a>
+                <ul class="dropdown-menu">
+                    <li><a href="admin-donor-list.html">Donar List</a></li>
+                    <li><a href="admin-patient-list.html">Patient List</a></li>
+
+                </ul>
+            </li> -->
+            <li class="dropdown">
+                <a href="#">Donate Blood</a>
+                <ul class="dropdown-menu">
+                    <li><a href="patient-register.html">Patient Register</a></li>
+                    <li><a href="donor-register.html">Donor Register</a></li>
+
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <section id="container-wrap">
+
+
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-card">
+                    <img src="images/blood-drop.jpeg" id="profile-picture" class="profile-picture"
+                        alt="Profile Picture">
+                    <h2 id="patient-name">Loading...</h2>
+                    <button class="edit-btn" onclick="editPatient()">Edit Profile</button>
+                </div>
+
+                <div class="details-card">
+                    <h3>About</h3>
+                    <p id="loading">Fetching patient details...</p>
+                    <table id="patient-table" style="display: none;">
+                        <tr>
+                            <td>Full Name</td>
+                            <td id="patient-fullName"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td id="patient-email"></td>
+                        </tr>
+                        <tr>
+                            <td>District</td>
+                            <td id="patient-district"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td id="patient-phone"></td>
+                        </tr>
+                        <tr>
+                            <td>Pincode</td>
+                            <td id="patient-pincode"></td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td id="patient-age"></td>
+                        </tr>
+                        <tr>
+                            <td>Blood Group</td>
+                            <td id="patient-bloodGroup"></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td id="patient-address"></td>
+                        </tr>
+                        <tr>
+                            <td>Required Blood Type</td>
+                            <td id="patient-blood-type"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer" style="margin-top: 20px;">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blood Donation | All Rights Reserved by <a style="color: #000;"
+                    href="https://www.linkedin.com/in/vineethkumar-mudham/">Vineeth Kumar</a></p>
+        </div>
+    </footer>
+
+
+    <script src="js/scroll-bar.js"></script>
+
+    <script src="js/hamburger.js"></script>
+    <script src="js/profile-dropdown.js"></script>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/patient-dashboard.js"></script>
+
+</body>
+
+</html>

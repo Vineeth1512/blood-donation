@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+    <!-- Bootstrap CSS CDN Start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS CDN  End -->
+    <!-- font -style  start-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font -style  end-->
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/carsousel.css">
+    <link rel="stylesheet" href="css/register-count.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/learn-about.css">
+    <link rel="stylesheet" href="css/donation-types.css">
+    <link rel="stylesheet" href="css/quotes-moving.css">
+
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Merriweather', Georgia, serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="guest-index.html"> <img src="images/blood-logo.png" alt="Blood Drop Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="guest-index.html" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#learn-about-donation">Learn About Donation</a></li>
+                <li class="dropdown">
+                    <a href="#">Looking For Blood</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin-donor-list.html">Donar List</a></li>
+                        <li><a href="admin-patient-list.html">Patient List</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Donate Blood</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-register.html">Patient Register</a></li>
+                        <li><a href="donor-register.html">Donor Register</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="profile-dropdown" id="profile-dropdown">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                alt="Profile" id="header-profile" class="profile-pic" onclick="toggleProfileDropdown()" />
+            <ul class="profile-menu" id="profileMenu">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="profile-dropdown" id="mobile-profile-dropdown">
+            <ul style="list-style-type: none;">
+                <li class="dropdown">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                        alt="Profile" id="mobile-header-profile" class="profile-pic"
+                        onclick="toggleProfileDropdown()" />
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="index.html" onclick="logout()">Logout</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <!-- <li>
+                <a href="guest-index.html">Guest Login</a>
+            </li> -->
+            <li><a href="guest-index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#learn-about-donation">Learn About Donation</a></li>
+            <li class="dropdown">
+                <a href="#">Looking For Blood</a>
+                <ul class="dropdown-menu">
+                    <li><a href="admin-donor-list.html">Donar List</a></li>
+                    <li><a href="admin-patient-list.html">Patient List</a></li>
+
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Donate Blood</a>
+                <ul class="dropdown-menu">
+                    <li><a href="patient-register.html">Patient Register</a></li>
+                    <li><a href="donor-register.html">Donor Register</a></li>
+
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <section class="section-carousel">
+        <div>
+            <div id="bloodBankCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://eraktkosh.mohfw.gov.in/eraktkoshPortal/assets/images/header3.png"
+                            class="d-block w-100" alt="Blood Donation">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://eraktkosh.mohfw.gov.in/eraktkoshPortal/assets/images/header4.png"
+                            class="d-block w-100" alt="Healthcare">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://eraktkosh.mohfw.gov.in/eraktkoshPortal/assets/images/header5.png"
+                            class="d-block w-100" alt="Blood Bank">
+
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#bloodBankCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#bloodBankCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#bloodBankCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#bloodBankCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#bloodBankCarousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="stats-section">
+            <div class="stat stat-left">
+                <div class="count" id="donorCount">0</div>
+                <div class="label">Donor Registered</div>
+            </div>
+            <div class="stat stat-right">
+                <div class="count" id="bloodCount">0</div>
+                <div class="label">Blood Units Collected</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Services -->
+    <section class="services">
+        <h1 class="sec-head">Our Services</h1>
+        <div class="cards">
+            <div class="card">
+                <img src="images/blood-search.png" alt="Blood Availability Search" />
+                <p>Blood Availability Search</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/401/401061.png" alt="Blood Bank Directory" />
+                <p>Blood Bank Directory</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Blood Donation Camps" />
+                <p>Blood Donation Camps</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Donor Login" />
+                <p>Donor Login</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="sec-head">About us</h1>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://templates.bwlthemes.com/blood_donation/v_2/images/about_feat_bg.jpg"
+                    alt="Blood Donation">
+            </div>
+            <div class="about-content">
+                <!-- <small>Make an impact</small> -->
+                <h2>About Our Blood Bank</h2>
+
+                <p>We aim to connect voluntary blood donors with patients in need through a reliable and efficient
+                    platform.
+                    Our Blood Bank ensures timely blood availability, saving lives and making donation simpler.</p>
+
+
+                <button class="about-btn">DONATE NOW</button>
+            </div>
+        </div>
+    </section>
+    <section id="learn-about-donation" class="donation-section">
+        <h1>Learn About Donation</h1>
+        <p class="subtitle">Select your Blood Type</p>
+
+        <div class="blood-types">
+            <button class="blood-btn active" onclick="updateInfo('A+')">A+</button>
+            <button class="blood-btn" onclick="updateInfo('O+')">O+</button>
+            <button class="blood-btn" onclick="updateInfo('B+')">B+</button>
+            <button class="blood-btn" onclick="updateInfo('AB+')">AB+</button>
+            <button class="blood-btn" onclick="updateInfo('A-')">A-</button>
+            <button class="blood-btn" onclick="updateInfo('O-')">O-</button>
+            <button class="blood-btn" onclick="updateInfo('B-')">B-</button>
+            <button class="blood-btn" onclick="updateInfo('AB-')">AB-</button>
+        </div>
+
+        <div class="info-container">
+            <div class="info-box">
+                <div class="donation-info">
+                    <div class="donation-info-text">
+                        <div class="can-take">
+                            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" />
+                            <p>You can take from<br><span id="take-from" class="blood-group">O+ O- A+ A- </span></p>
+                        </div>
+                        <div class=" can-give">
+                            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" />
+                            <p>You can give to<br><span id="give-to" class="blood-group">A+ AB+ </span></p>
+                        </div>
+                    </div>
+                    <div class="donation-image">
+                        <img src="https://eraktkosh.mohfw.gov.in/eraktkoshPortal/assets/images/doctor.png"
+                            alt="Donation Illustration" />
+                        <p>One Blood Donation can save up to <span class="highlight">Three Lives</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="donation-section">
+        <h2>Types of Donation</h2>
+        <p class="donation-description">
+            The average human body contains about five litres of blood, which is made of several cellular and
+            non-cellular components such as
+            <span class="donation-highlight">Red blood cell</span>, <span class="donation-highlight">Platelet</span>,
+            and <span class="donation-highlight">Plasma</span>.
+        </p>
+
+        <div class="donation-flex-container">
+            <div class="donation-tabs">
+                <button class="donation-tab-btn active" onclick="showDonationType('rbc')">Packed Red Blood
+                    Cells</button>
+                <button class="donation-tab-btn" onclick="showDonationType('plasma')">Plasma</button>
+                <button class="donation-tab-btn" onclick="showDonationType('platelets')">Platelets</button>
+            </div>
+
+            <div class="donation-tab-content">
+                <div class="donation-text-block">
+                    <h4>What is it?</h4>
+                    <p id="donation-what"></p>
+                    <h4>Who can donate?</h4>
+                    <p id="donation-who"></p>
+                    <h4>Used For?</h4>
+                    <p id="donation-used-for"></p>
+                </div>
+                <div class="donation-image-block">
+                    <canvas id=c width=1920 height=1080></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-card">
+                    <div class="icon">⏱️</div>
+                    <strong>It takes only an hour</strong><br>
+                    <small>One blood donation can save lives!</small>
+                </div>
+                <div class="carousel-card">
+                    <div class="icon">🥤</div>
+                    <strong>Free refreshments</strong><br>
+                    <small>Donation is safe and healthy.</small>
+                </div>
+                <div class="carousel-card">
+                    <div class="icon">💸</div>
+                    <strong>It costs nothing</strong><br>
+                    <small>Give blood, stay healthy!</small>
+                </div>
+                <div class="carousel-card">
+                    <div class="icon">❤️</div>
+                    <strong>Save a life</strong><br>
+                    <small>Every donor is a hero.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blood Donation | All Rights Reserved by <a style="color: #000;"
+                    href="https://www.linkedin.com/in/vineethkumar-mudham/">Vineeth Kumar</a></p>
+        </div>
+    </footer>
+
+
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="js/logout.js"></script>
+    <script src="js/scroll-bar.js"></script>
+    <!-- <script src="js/blood-flow.js"></script> -->
+    <script src="js/hamburger.js"></script>
+    <script src="js/donors-and-blood-count.js"></script>
+    <script src="js/scroll-smooth.js"></script>
+    <script src="js/learn-about-donation.js"></script>
+    <script src="js/donation-types.js"></script>
+    <script src="js/quotes-moving.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

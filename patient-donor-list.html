@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Donor List</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/patient-donor-list.css">
+    <link rel="stylesheet" href="css/donor-table.css">
+    <link rel="stylesheet" href="css/donor-search.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="images/blood-logo.png" alt="Blood Drop Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#learn-about-donation">Learn About Donation</a></li>
+                <li class="dropdown">
+                    <a href="#">Looking For Blood</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-donor-list.html">Donar List</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Donate Blood</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-register.html">Patient Register</a></li>
+                        <li><a href="donor-register.html">Donor Register</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li class="dropdown">
+                    <a href="#">Register Now ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Patient Register</a></li>
+                        <li><a href="register-donar.html">Donor Register</a></li>
+                        <li><a href="organize-register.html">Organization Register</a></li>
+    
+                    </ul>
+                </li> -->
+            </ul>
+        </nav>
+        <div class="profile-dropdown" id="profile-dropdown">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                alt="Profile" id="header-profile" class="profile-pic" onclick="toggleProfileDropdown()" />
+            <ul class="profile-menu" id="profileMenu">
+                <li><a href="patient-dashboard.html">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="profile-dropdown" id="mobile-profile-dropdown">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                alt="Profile" id="mobile-header-profile" class="profile-pic" onclick="toggleProfileDropdown()" />
+            <ul class="profile-menu" id="profileMenu">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="index.html" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+        <ul>
+            <!-- <li>
+                <a href="guest-index.html">Guest Login</a>
+            </li> -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#learn-about-donation">Learn About Donation</a></li>
+            <li class="dropdown">
+                <a href="#">Looking For Blood</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="donars-list.html">Donar List</a></li>
+                    <li><a href="organize-list.html">Patient List</a></li>
+
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Donate Blood</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="patient-register.html">Patient Register</a></li>
+                    <li><a href="donor-register.html">Donor Register</a></li>
+                    <li><a href="organize-register.html">Organization Register</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <section>
+        <div class="blood-stock-section">
+            <h2>Blood Stock Availability</h2>
+
+            <div class="search-box">
+                <div class="search-header">Search Blood Stock</div>
+                <div class="form-row">
+                    <input type="text" id="locationInput" placeholder="Enter location">
+
+                    <select id="bloodGroupSelect">
+                        <option value="">All Blood Groups</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+                <!-- <div class="search-btn">
+                    <button id="search-button" onclick="searchDonors()">Search</button>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <div class="content-wrap">
+        <div id="donors" class="tab-content active">
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 20px;">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blood Donation | All Rights Reserved by <a style="color: #000;"
+                    href="https://www.linkedin.com/in/vineethkumar-mudham/">Vineeth Kumar</a></p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+            // Clear localStorage/sessionStorage if used
+            // Redirect to login page
+            window.location.href = "patient-login.html";
+        }
+    </script>
+        <script src="js/scroll-bar.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/profile-dropdown.js"></script>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/donor-list.js"></script>
+
+</body>
+
+</html>

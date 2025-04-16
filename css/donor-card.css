@@ -1,0 +1,119 @@
+#donors {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  transition: transform 0.3s;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  margin-right: 15px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* #7b1337, #c23d8c */
+  border: 3px solid #c23d8c;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.user-info p {
+  color: #777;
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.details {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.details p {
+  margin: 6px 0;
+}
+
+.details span {
+  font-weight: bold;
+  color: #7b1337;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.edit {
+  background: #1d3557;
+  color: #fff;
+}
+
+.btn.edit:hover {
+  background: #16324f;
+}
+
+.btn.delete {
+  background: #c23d8c;
+  color: #fff;
+}
+
+.btn.delete:hover {
+  background: #7b1337;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  #donors {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2%;
+  }
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    /* 2 cards per row on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex: 1 1 calc(25% - 20px);
+    /* 4 cards per row on desktops */
+  }
+}

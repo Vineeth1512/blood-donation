@@ -1,0 +1,133 @@
+.donation-section {
+  padding: 40px 20px;
+  text-align: center;
+  /* max-width: 1200px; */
+  margin: auto;
+}
+
+.donation-section h2 {
+  font-size: 2.2rem;
+  color: #7b1337;
+}
+
+.donation-description {
+  max-width: 800px;
+  margin: 10px auto 30px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.donation-highlight {
+  color: #7b1337;
+  font-weight: bold;
+}
+
+.donation-flex-container {
+  display: flex;
+  gap: 20px;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.donation-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20%;
+  /* border-left: 1px solid #b20000; */
+}
+
+.donation-tab-btn {
+  padding: 12px 18px;
+  background: #fff;
+  border: 1px solid #7b1337;
+  /* border-left: 5px solid transparent; */
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.donation-tab-btn.active {
+  background: #ffecec;
+  /* border-left: 5px solid #b20000; */
+}
+
+.donation-tab-content {
+  background: #fff;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.donation-text-block,
+.donation-image-block {
+  width: 50%;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+.donation-image-block canvas {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+}
+
+.donation-text-block h4 {
+  margin-top: 10px;
+  color: #7b1337;
+}
+
+.donation-text-block p {
+  margin: 0 0 10px;
+}
+
+.donation-image-block img {
+  width: 250px;
+  height: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .donation-flex-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .donation-tabs {
+    /* flex-direction: row; */
+    width: 100%;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 1px solid #b20000;
+
+    padding-bottom: 10px;
+  }
+
+  .donation-tab-btn {
+    flex: 1 0 auto;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+  }
+
+  .donation-tab-btn.active {
+    border-bottom: 2px solid #b20000;
+    background: #ffecec;
+  }
+
+  .donation-tab-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .donation-text-block,
+  .donation-image-block {
+    width: 100%;
+  }
+}

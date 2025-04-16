@@ -1,0 +1,87 @@
+.blood-stock-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.blood-stock-section h2 {
+  color: #8b1e3f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-header {
+  background-color: #8b1e3f;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 16px;
+  justify-content: center;
+}
+
+.form-row select,
+.form-row input {
+  padding: 10px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-btn {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.search-btn button {
+  background-color: #8b1e3f;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-btn button:hover {
+  background-color: #3f0d26;
+}
+
+#generalSearchInput {
+  width: 100%;
+  max-width: 450px;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#generalSearchInput:focus {
+  outline: none;
+  border-color: #8b1e3f;
+  box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.1);
+}
+
+/* Optional: Add a search icon inside the input field */
+#generalSearchInput::placeholder {
+  color: #999;
+  font-style: italic;
+}

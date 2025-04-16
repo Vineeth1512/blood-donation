@@ -1,0 +1,50 @@
+/* .section-carousel {
+  margin: 0;
+  padding: 0;
+} */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #c23d8c;
+  /* red-like color for blood theme */
+  opacity: 0.5;
+  border: none;
+
+  margin: 0 5px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  transform: scale(1.2);
+  background-color: #7b1337;
+  /* darker red for active dot */
+}
+
+.carousel-item img {
+  /* height: 80vh; */
+  object-fit: contain;
+  width: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 40vh;
+    object-fit: contain;
+  }
+  .carousel-indicators {
+    z-index: 1;
+  }
+}

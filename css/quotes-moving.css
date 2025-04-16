@@ -1,0 +1,48 @@
+.carousel-section {
+  margin: 0;
+  /* background: #c23d8c; */
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  /* GAP between cards */
+  transition: transform 5s linear;
+}
+
+.carousel-card {
+  background: white;
+  color: black;
+  flex: 0 0 calc((100% - 40px) / 3);
+
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-card .icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-card {
+    flex: 0 0 100%;
+  }
+}

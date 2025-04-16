@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  font-family: "Merriweather", Georgia, serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: radial-gradient(circle, #a0003d, #45001e);
+
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.logo img {
+  width: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+.login-btn {
+  /* padding: 8px 20px; */
+  padding: 2px 15px;
+  border: 1px solid #45001e;
+  background: #a0003d;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  /* border-radius: 25px; */
+  border-radius: 50%;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  min-width: 180px;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+/* Show dropdown on hover (Desktop) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.mobile-dropdown-menu.active {
+  display: block;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-menu ul li {
+  margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.mobile-dropdown.active {
+  display: block;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  object-fit: cover;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  width: 160px;
+  z-index: 100;
+}
+
+.profile-menu li a {
+  display: block;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profile-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.footer {
+  background: radial-gradient(circle, #a0003d, #45001e);
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+}
+
+.footer-bottom {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .login-btn,
+  #profile-dropdown {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu .dropdown-menu {
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mobile-menu .dropdown:hover .dropdown-menu {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu .dropdown-menu li {
+    margin: 10px 0;
+  }
+
+  .mobile-menu .dropdown-menu li a {
+    color: #333;
+    font-size: 16px;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}

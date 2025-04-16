@@ -1,0 +1,197 @@
+.donation-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.donation-section h1 {
+  color: #7b1337;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.blood-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
+  margin-bottom: 30px;
+}
+
+.blood-btn {
+  padding: 10px 18px;
+  border: 1px solid #7b1337;
+  border-radius: 8px;
+  background: white;
+  color: #c23d8c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.blood-btn.active,
+.blood-btn:hover {
+  background: radial-gradient(circle, #a0003d, #45001e);
+  color: white;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.info-box {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.donation-info {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.donation-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.can-take,
+.can-give {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  gap: 40px;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+}
+
+.can-take {
+  background: #fdd9a0;
+}
+
+.can-give {
+  background: #b6d6ff;
+}
+
+.can-take img,
+.can-give img {
+  width: 50px;
+  height: 50px;
+}
+
+.donation-image {
+  max-width: 300px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.donation-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.donation-image p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.highlight {
+  color: #7b1337;
+  font-weight: bold;
+}
+.blood-group {
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+  display: inline-block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .donation-section h1 {
+    font-size: 2rem;
+  }
+
+  .blood-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .blood-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .donation-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .donation-info-text {
+    width: 100%;
+    align-items: center;
+  }
+
+  .can-take,
+  .can-give {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .can-take img,
+  .can-give img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .donation-image {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .donation-section {
+    padding: 20px 10px;
+  }
+
+  .donation-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .blood-btn {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+
+  .can-take,
+  .can-give {
+    font-size: 1rem;
+  }
+
+  .donation-image p {
+    font-size: 0.85rem;
+  }
+}

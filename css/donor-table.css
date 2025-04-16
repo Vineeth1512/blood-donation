@@ -1,0 +1,71 @@
+/* Donor Table Styles */
+#donors {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+#donors table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#donors thead {
+  background-color: #c23d8c;
+  color: #fff;
+  text-align: left;
+}
+
+#donors th,
+#donors td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#donors tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#donors th {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.request-btn {
+  padding: 6px 12px;
+  border: none;
+  background-color: #7b1337;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.request-btn:hover:not(:disabled) {
+  background-color: #c23d8c;
+}
+
+.request-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive table scroll for small screens */
+@media (max-width: 768px) {
+  #donors table {
+    font-size: 13px;
+  }
+
+  #donors th,
+  #donors td {
+    padding: 10px;
+  }
+}
