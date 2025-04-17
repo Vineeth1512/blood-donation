@@ -25,12 +25,10 @@
   opacity: 1;
   transform: scale(1.2);
   background-color: #7b1337;
-  /* darker red for active dot */
 }
 
 .carousel-item img {
-  /* height: 80vh; */
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
 }
 

@@ -34,7 +34,7 @@
   content: "";
   display: block;
   width: 50px;
-  height: 3px;
+  /* height: 3px; */
   background-color: #7b1337;
   margin: 10px 0;
 }
