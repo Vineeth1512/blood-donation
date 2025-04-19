@@ -89,15 +89,21 @@ async function fetchData() {
   try {
     const querySnapshot = await getDocs(collection(db, "users"));
     const donorsList = [];
-
+    let totalBloodUnits = 0;
     querySnapshot.forEach((docItem) => {
       const data = docItem.data();
+
       if (data.role === "donor") {
         donorsList.push({ id: docItem.id, ...data });
+        console.log(data.fullName, data.units);
+
+        totalBloodUnits += Number(data.units);
       }
     });
+    console.log(totalBloodUnits);
 
     allDonors = donorsList;
+
     renderDonors(allDonors);
   } catch (error) {
     console.error("Error fetching data:", error);
