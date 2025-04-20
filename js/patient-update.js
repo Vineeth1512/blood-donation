@@ -9,6 +9,16 @@ const matchText = document.getElementById("match");
 const updateBtn = document.getElementById("update-btn");
 const patientData = JSON.parse(localStorage.getItem("patientData"));
 
+document.addEventListener("DOMContentLoaded", function () {
+  const userData = localStorage.getItem("patientData");
+
+  if (!userData) {
+    // Redirect to login page if user is not logged in
+    alert("No Patient Found, Register please..! ");
+    window.location.href = "patient-login.html";
+  }
+});
+
 updateBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   matchText.innerText = "";
@@ -87,6 +97,7 @@ async function updatePatientInFirestore(data) {
   const patientRef = doc(db, "users", patientData.id);
   await updateDoc(patientRef, {
     ...data,
+    hasUploadedDetails: true,
     updatedAt: new Date(),
   });
   localStorage.setItem(

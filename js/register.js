@@ -32,6 +32,7 @@ async function registerUser(
       fullName,
       email,
       role: "donor",
+      hasUploadedDetails: false,
       createdAt: new Date(),
     });
 

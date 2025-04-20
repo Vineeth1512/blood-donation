@@ -156,16 +156,21 @@
     </footer>
 
     <script>
+
         function logout() {
-            alert("You have been logged out.");
-            // Clear localStorage/sessionStorage if used
-            // Redirect to login page
-            window.location.href = "donor-login.html";
+            const confirmLogout = confirm("Are you sure you want to log out?");
+            if (confirmLogout) {
+                // User confirmed logout
+                localStorage.removeItem("DonorData");
+                window.location.href = "donor-login.html";
+            }
         }
     </script>
     <script src="js/hamburger.js"></script>
     <script src="js/profile-dropdown.js"></script>
     <script src="js/scroll-bar.js"></script>
+    <script src="js/blood-drop-animation.js"></script>
+
 
 
     <script type="module" src="js/firebase-config.js"></script>

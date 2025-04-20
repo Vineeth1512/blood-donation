@@ -6,6 +6,15 @@ import {
 
 const { db } = initFirebase();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const userData = localStorage.getItem("patientData");
+
+  if (!userData) {
+    alert("No Patient Found, Register please..! ");
+    return (window.location.href = "patient-login.html");
+  }
+});
+
 const patientData = JSON.parse(localStorage.getItem("patientData"));
 const updateBtn = document.getElementById("update-btn");
 

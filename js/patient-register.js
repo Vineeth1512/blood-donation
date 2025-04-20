@@ -31,6 +31,7 @@ registerForm.addEventListener("submit", async (e) => {
         fullName: fullName,
         email: email,
         role: "patient",
+        hasUploadedDetails: false,
         createdAt: new Date(),
       });
 

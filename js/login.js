@@ -31,14 +31,10 @@ async function loginUser(email, password, errorElement) {
 
       localStorage.setItem("DonorData", JSON.stringify(userData));
 
-      let isFirstTime = localStorage.getItem(`firstLogin-${user.uid}`);
-      console.log(isFirstTime);
-
-      if (!isFirstTime) {
-        localStorage.setItem(`firstLogin-${user.uid}`, "true");
-        window.location.href = "donor-update.html";
-      } else {
+      if (userData.hasUploadedDetails) {
         window.location.href = "donor-dashboard.html";
+      } else {
+        window.location.href = "donor-update.html";
       }
 
       alert(`Login Successful!\nWelcome, ${userData.fullName}!`);

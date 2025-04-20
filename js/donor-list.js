@@ -5,6 +5,15 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 const { db } = initFirebase();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const userData = localStorage.getItem("patientData");
+
+  if (!userData) {
+    alert("No Patient Found, Register please..! ");
+    window.location.href = "patient-login.html";
+  }
+});
+
 let allDonors = [];
 
 async function fetchDonorsFromFirestore() {

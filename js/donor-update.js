@@ -8,6 +8,17 @@ const { db } = initFirebase();
 // Retrieve stored donor data from localStorage
 const donorData = JSON.parse(localStorage.getItem("DonorData"));
 
+document.addEventListener("DOMContentLoaded", function () {
+  const userData = localStorage.getItem("DonorData");
+  console.log(userData);
+
+  if (!userData) {
+    // Redirect to login page if user is not logged in
+    alert("No Donor Found, Register please..! ");
+    window.location.href = "donor-login.html";
+  }
+});
+
 // Initialize the update form
 function initializeForm() {
   const submitButton = document.getElementById("submit-btn");
@@ -125,6 +136,7 @@ async function updateDonorInFirestore(data) {
     const donorRef = doc(db, "users", donorData.id);
     await updateDoc(donorRef, {
       ...data,
+      hasUploadedDetails: true,
       updatedAt: new Date(),
     });
 

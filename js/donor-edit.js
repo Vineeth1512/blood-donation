@@ -6,27 +6,16 @@ import {
 
 const { db } = initFirebase();
 
-// Function to populate form with existing donor data
-// function populateDonorData() {
-//   let donorData = JSON.parse(localStorage.getItem("DonorData"));
-//   if (donorData) {
-//     document.getElementById("sign-firstName").value = donorData.fullName || "";
-//     document.getElementById("sign-email").value = donorData.email || "";
-//     document.getElementById("sign-phone").value = donorData.phoneNumber || "";
-//     document.getElementById("sign-age").value = donorData.age || "";
-//     document.getElementById("sign-units").value = donorData.units || "";
-//     document.getElementById("sign-gender").value = donorData.gender || "";
-//     document.getElementById("sign-address").value = donorData.address || "";
-//     document.getElementById("sign-available").value =
-//       donorData.availability || "";
-//     document.getElementById("sign-blood-group").value =
-//       donorData.bloodGroup || "";
-//     document.getElementById("sign-last-donate").value =
-//       donorData.lastDonation || "";
-//     document.getElementById("sign-profile").src = donorData.profilePic || "";
-//     document.getElementById("header-profile").src = donorData.profilePic || "";
-//   }
-// }
+document.addEventListener("DOMContentLoaded", function () {
+  const userData = localStorage.getItem("DonorData");
+  console.log(userData);
+
+  if (!userData) {
+    // Redirect to login page if user is not logged in
+    alert("No Donor Found, Register please..! ");
+    window.location.href = "donor-login.html";
+  }
+});
 
 // Function to gather form values
 function getFormValues() {

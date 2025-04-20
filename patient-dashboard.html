@@ -37,15 +37,7 @@
                     </ul>
                 </li>
 
-                <!-- <li class="dropdown">
-                    <a href="#">Register Now ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Patient Register</a></li>
-                        <li><a href="register-donar.html">Donor Register</a></li>
-                        <li><a href="organize-register.html">Organization Register</a></li>
 
-                    </ul>
-                </li> -->
             </ul>
         </nav>
         <div class="profile-dropdown" id="profile-dropdown">
@@ -129,18 +121,12 @@
                             <td>Email</td>
                             <td id="patient-email"></td>
                         </tr>
-                        <tr>
-                            <td>District</td>
-                            <td id="patient-district"></td>
-                        </tr>
+
                         <tr>
                             <td>Phone Number</td>
                             <td id="patient-phone"></td>
                         </tr>
-                        <tr>
-                            <td>Pincode</td>
-                            <td id="patient-pincode"></td>
-                        </tr>
+
                         <tr>
                             <td>Age</td>
                             <td id="patient-age"></td>
@@ -172,10 +158,22 @@
     </footer>
 
 
+    <script>
+        function logout() {
+            const confirmLogout = confirm("Are you sure you want to log out?");
+            if (confirmLogout) {
+                // User confirmed logout
+                localStorage.removeItem("patientData");
+                window.location.href = "patient-login.html";
+            }
+        }
+
+    </script>
     <script src="js/scroll-bar.js"></script>
 
     <script src="js/hamburger.js"></script>
     <script src="js/profile-dropdown.js"></script>
+    <script src="js/blood-drop-animation.js"></script>
 
     <script type="module" src="js/firebase-config.js"></script>
     <script type="module" src="js/patient-dashboard.js"></script>

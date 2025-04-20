@@ -39,15 +39,7 @@
                     </ul>
                 </li>
 
-                <!-- <li class="dropdown">
-                    <a href="#">Register Now ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Patient Register</a></li>
-                        <li><a href="register-donar.html">Donor Register</a></li>
-                        <li><a href="organize-register.html">Organization Register</a></li>
-    
-                    </ul>
-                </li> -->
+
             </ul>
         </nav>
         <div class="profile-dropdown" id="profile-dropdown">
@@ -74,9 +66,7 @@
             </ul>
         </div>
         <ul>
-            <!-- <li>
-                <a href="guest-index.html">Guest Login</a>
-            </li> -->
+
             <li><a href="index.html">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#learn-about-donation">Learn About Donation</a></li>
@@ -146,15 +136,18 @@
 
     <script>
         function logout() {
-            alert("You have been logged out.");
-            // Clear localStorage/sessionStorage if used
-            // Redirect to login page
-            window.location.href = "patient-login.html";
+            const confirmLogout = confirm("Are you sure you want to log out?");
+            if (confirmLogout) {
+                // User confirmed logout
+                localStorage.removeItem("patientData");
+                window.location.href = "patient-login.html";
+            }
         }
     </script>
     <script src="js/scroll-bar.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/profile-dropdown.js"></script>
+    <script src="js/blood-drop-animation.js"></script>
 
     <script type="module" src="js/firebase-config.js"></script>
     <script type="module" src="js/donor-list.js"></script>

@@ -31,12 +31,10 @@ const handleLogin = async (e) => {
       const userData = userDoc.data();
       localStorage.setItem("patientData", JSON.stringify(userData));
 
-      const isFirstTime = localStorage.getItem(`firstPatientLogin-${user.uid}`);
-      if (!isFirstTime) {
-        localStorage.setItem(`firstPatientLogin-${user.uid}`, "true");
-        window.location.href = "patient-update.html";
-      } else {
+      if (userData.hasUploadedDetails) {
         window.location.href = "patient-dashboard.html";
+      } else {
+        window.location.href = "patient-update.html";
       }
 
       alert(`Login Successful!\nWelcome, ${userData.fullName}!`);

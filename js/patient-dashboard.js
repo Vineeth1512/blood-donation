@@ -53,9 +53,7 @@ function updatePatientUI(patient) {
   $("patient-name").innerText = patient.fullName || "Patient";
   $("patient-fullName").innerText = patient.fullName || "N/A";
   $("patient-email").innerText = patient.email || "N/A";
-  $("patient-district").innerText = patient.district || "N/A";
   $("patient-phone").innerText = patient.phoneNumber || "N/A";
-  $("patient-pincode").innerText = patient.pincode || "N/A";
   $("patient-age").innerText = patient.age || "N/A";
   $("patient-bloodGroup").innerText = patient.bloodGroup || "N/A";
   $("patient-address").innerText = patient.address || "N/A";
