@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/patient-donor-list.css">
     <link rel="stylesheet" href="css/donor-table.css">
     <link rel="stylesheet" href="css/donor-search.css">
-    <link rel="shortcut icon" href="images/blood-drop.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/blood-logo.png" type="image/x-icon">
 
 
 </head>
@@ -58,11 +58,17 @@
     </header>
     <div class="mobile-menu" id="mobileMenu">
         <div class="profile-dropdown" id="mobile-profile-dropdown">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
-                alt="Profile" id="mobile-header-profile" class="profile-pic" onclick="toggleProfileDropdown()" />
-            <ul class="profile-menu" id="profileMenu">
-                <li><a href="#">Edit Profile</a></li>
-                <li><a href="index.html" onclick="logout()">Logout</a></li>
+            <ul style="list-style-type: none;">
+                <li class="dropdown">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb2P4yPPrTY_H7OpNzOPDL1-z8soSbx8vJg&s"
+                        alt="Profile" id="mobile-header-profile" class="profile-pic"
+                        onclick="toggleProfileDropdown()" />
+                    <ul class="dropdown-menu">
+                        <li><a href="patient-dashboard.html">Profile</a></li>
+                        <li><a href="#" onclick="logout()">Logout</a></li>
+
+                    </ul>
+                </li>
             </ul>
         </div>
         <ul>

@@ -1,4 +1,4 @@
-const numberOfDrops = 50;
+const numberOfDrops = 40;
 for (let i = 0; i < numberOfDrops; i++) {
   const drop = document.createElement("div");
   drop.classList.add("blood-drop");
@@ -31,4 +31,4 @@ setTimeout(() => {
     drop.style.animation = "none";
     drop.style.opacity = "0";
   });
-}, 8000); // stop after 10 seconds
+}, 5000); // stop after 5 seconds
