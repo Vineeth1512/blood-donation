@@ -31,4 +31,4 @@ setTimeout(() => {
     drop.style.animation = "none";
     drop.style.opacity = "0";
   });
-}, 5000); // stop after 5 seconds
+}, 2000); // stop after 5 seconds
