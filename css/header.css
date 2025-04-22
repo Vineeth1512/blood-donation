@@ -17,9 +17,10 @@ header {
   align-items: center;
   padding: 20px;
   background: radial-gradient(circle, #a0003d, #45001e);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -301,5 +302,9 @@ nav ul li a:hover,
   .footer-bottom {
     text-align: center;
     font-size: 1.3rem;
+  }
+  html,
+  body {
+    overflow-x: hidden;
   }
 }
