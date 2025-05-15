@@ -80,14 +80,15 @@
                 <h2>Login</h2>
                 <form>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required />
+                    <input type="email" id="email" placeholder="Enter your email" />
 
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required />
+                    <input type="password" id="password" placeholder="Enter your password" />
 
                     <a href="patient-forget-password.html" class="forgot-password">Forgot Password?</a>
                     <p class="or-text" id="match"></p>
                     <button type="submit" class="login-button" id="login-button">Login</button>
+                    <button type="submit" class="login-button" id="guest-login-button">Continue as Guest</button>
 
                     <p class="or-text">Don't have an account? <a href="patient-register.html">Sign up here</a></p>
                 </form>
@@ -103,6 +104,7 @@
 
     <script type="module" src="js/patient-firebase-config.js"></script>
     <script type="module" src="js/patient-login.js"></script>
+    <script type="module" src="js/patient-guest-login.js"></script>
 
     <script src="js/hamburger.js"></script>
     <script src="js/scroll-bar.js"></script>

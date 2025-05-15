@@ -21,10 +21,11 @@ window.editPatient = editPatient;
 // ✅ Load patient details from Firestore
 async function loadPatientDetails() {
   const patientData = JSON.parse(localStorage.getItem("patientData"));
+  console.log(patientData);
 
   if (!patientData || !patientData.id) {
-    alert("Error: Patient data not found. Please register again.");
-    window.location.href = "patient-register.html";
+    //alert("Error: Patient data not found. Please register again.");
+  //  window.location.href = "patient-register.html";
     return;
   }
 

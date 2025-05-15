@@ -52,4 +52,5 @@ const handleLogin = async (e) => {
   }
 };
 
-document.querySelector("form").addEventListener("submit", handleLogin);
+//document.querySelector("form").addEventListener("submit", handleLogin);
+document.getElementById("login-button").addEventListener("click", handleLogin);
