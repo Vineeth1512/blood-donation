@@ -7,6 +7,9 @@
   padding: 1rem;
   border-radius: 10px;
 }
+.carousel-inner{
+  margin-top: 80px;
+}
 
 .carousel-indicators [data-bs-target] {
   width: 14px;

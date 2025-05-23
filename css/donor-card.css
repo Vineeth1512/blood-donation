@@ -1,3 +1,10 @@
+.tab-content{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+}
+
 .card {
   background: #fff;
   border-radius: 15px;
@@ -108,6 +115,10 @@
 
 /* Responsive Layout */
 @media (max-width: 768px) {
+  .tab-content{
+    display: grid;
+    grid-template-columns: auto;
+  }
   .card {
     flex: 1 1 calc(50% - 20px);
   }

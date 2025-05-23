@@ -41,6 +41,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #fff;
+  padding: 10px;
   font-size: 18px;
 }
 
@@ -92,7 +93,7 @@ nav ul li a {
   background: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  min-width: 180px;
+  min-width: 100px;
   z-index: 20;
 }
 
@@ -126,10 +127,10 @@ nav ul li a {
 
 .mobile-menu {
   position: fixed;
-  top: 0;
+  top: 80px;
   right: 0;
-  width: 40%;
-  height: 100vh;
+  width: 50%;
+  /* height: 100vh; */
   background: radial-gradient(circle, #a0003d, #45001e);
   color: #fff !important;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
@@ -172,6 +173,7 @@ nav ul li a:hover,
 .mobile-menu ul li a:hover {
   transition: all 0.5s ease; /* Smooth transition */
   color: #45001e;
+ 
 }
 
 .profile-dropdown {
